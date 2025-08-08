@@ -1,8 +1,7 @@
+node_modules/
+
 src/api
 src/clases
 src/curse
-src/decorators
-src/generics
 src/interfaces
 src/practices
-node_modules/
