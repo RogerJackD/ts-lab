@@ -12,3 +12,4 @@ users.forEach((user, i) => {
 const names: string[] = users.map( user => user.name)
 
 console.log(names)
+
