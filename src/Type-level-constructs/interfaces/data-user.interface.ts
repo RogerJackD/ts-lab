@@ -22,25 +22,47 @@ export interface User {
     houseLocations : HouseLocation[];
 }
 
-const userMelo : Readonly<User> = {
-    name : 'roger',
-    lastname : 'jack',
-    contact : {
-        phoneNumber : 123455,
-        email : 'roger123@gmail.com',
+export const users : User[] = [
+    {
+        name : 'roger',
+        lastname : 'jack',
+        contact : {
+            phoneNumber : 123455,
+            email : 'roger123@gmail.com',
+        },
+        familyMember : [
+            {
+                relationship : 'mother',
+                fullName : 'mother'
+            }
+        ],
+        houseLocations : [
+            {
+                address : 'peru - city',
+                country : 'peru - peru',
+            },
+        ]
     },
-    familyMember : [
-        {
-            relationship : 'mother',
-            fullName : 'mother'
-        }
-    ],
-    houseLocations : [
-        {
-            address : 'peru - city',
-            country : 'peru - peru',
-        }
-    ]
-}
 
-console.log(userMelo)
+    {
+        name : 'melo',
+        lastname : 'jack',
+        contact : {
+            phoneNumber : 1234,
+            email : 'melo123@gmail.com',
+        },
+        familyMember : [
+            {
+                relationship : 'dad',
+                fullName : 'dad'
+            }
+        ],
+        houseLocations : [
+            {
+                address : 'peru - city',
+                country : 'peru - peru',
+            },
+        ]
+    },
+]
+    
