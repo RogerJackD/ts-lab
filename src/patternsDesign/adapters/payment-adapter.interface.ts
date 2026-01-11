@@ -34,3 +34,10 @@ export interface Transaction {
   status: 'pending' | 'completed' | 'failed' | 'cancelled';
   createdAt: Date;
 }
+
+export interface Customer {
+  id: string;
+  email: string;
+  name: string;
+  paymentMethods: PaymentMethod[];
+}
