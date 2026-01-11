@@ -26,3 +26,11 @@ export interface VerificationResult {
   fraudScore: number;
   riskLevel: 'low' | 'medium' | 'high';
 }
+
+export interface Transaction {
+  id: string;
+  amount: number;
+  currency: string;
+  status: 'pending' | 'completed' | 'failed' | 'cancelled';
+  createdAt: Date;
+}
