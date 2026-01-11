@@ -41,3 +41,10 @@ export interface Customer {
   name: string;
   paymentMethods: PaymentMethod[];
 }
+
+export interface WebhookPayload {
+  eventType: string;
+  transactionId: string;
+  timestamp: Date;
+  data: Record<string, any>;
+}
