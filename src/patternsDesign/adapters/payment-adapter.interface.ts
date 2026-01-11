@@ -20,3 +20,9 @@ export interface PaymentMethod {
   last4Digits?: string;
   expiryDate?: string;
 }
+
+export interface VerificationResult {
+  isValid: boolean;
+  fraudScore: number;
+  riskLevel: 'low' | 'medium' | 'high';
+}
