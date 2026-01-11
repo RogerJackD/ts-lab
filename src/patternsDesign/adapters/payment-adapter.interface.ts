@@ -13,3 +13,10 @@ export interface RefundResult {
   success: boolean;
   refundId: string;
 }
+
+export interface PaymentMethod {
+  id: string;
+  type: 'credit_card' | 'debit_card' | 'paypal' | 'bank_transfer';
+  last4Digits?: string;
+  expiryDate?: string;
+}
