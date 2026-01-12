@@ -62,3 +62,12 @@ export interface PaymentError {
   details?: string;
   timestamp: Date;
 }
+
+export interface Receipt {
+  receiptId: string;
+  transactionId: string;
+  amount: number;
+  currency: string;
+  issuedAt: Date;
+  downloadUrl?: string;
+}
