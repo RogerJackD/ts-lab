@@ -55,3 +55,10 @@ export interface GatewayConfig {
   timeout: number;
   retryAttempts: number;
 }
+
+export interface PaymentError {
+  code: string;
+  message: string;
+  details?: string;
+  timestamp: Date;
+}
