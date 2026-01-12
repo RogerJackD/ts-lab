@@ -71,3 +71,4 @@ export interface Receipt {
   issuedAt: Date;
   downloadUrl?: string;
 }
+
