@@ -48,3 +48,10 @@ export interface WebhookPayload {
   timestamp: Date;
   data: Record<string, any>;
 }
+
+export interface GatewayConfig {
+  apiKey: string;
+  environment: 'sandbox' | 'production';
+  timeout: number;
+  retryAttempts: number;
+}
