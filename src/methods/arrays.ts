@@ -15,3 +15,12 @@ console.log(names)
 
 const findName = users.find( user => user.familyMember.find( family => family.fullName === 'dad' ))
 console.log("----------", findName)
+
+function maxSumSubarray(arr: number[], k: number): number {
+  let maxSum = 0;
+  let windowSum = 0;
+  
+  // Tu código aquí
+  
+  return maxSum;
+}
