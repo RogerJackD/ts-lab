@@ -19,3 +19,17 @@ interface CartItem {
 function calculateTotal(items: CartItem[]): number {
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 }
+
+interface ApiResponse<T> {
+  data: T;
+  status: number;
+  message: string;
+}
+
+function createResponse<T>(data: T, status: number): ApiResponse<T> {
+  return {
+    data,
+    status,
+    message: status === 200 ? 'Success' : 'Error'
+  };
+}
