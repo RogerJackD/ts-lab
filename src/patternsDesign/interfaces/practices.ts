@@ -42,3 +42,14 @@ interface Point {
 function distance(p1: Point, p2: Point): number {
   return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
 }
+
+interface AppConfig {
+  theme: string;
+  language: string;
+  notifications: boolean;
+  autoSave: boolean;
+}
+
+function mergeConfig(defaults: AppConfig, custom: Partial<AppConfig>): AppConfig {
+  return { ...defaults, ...custom };
+}
