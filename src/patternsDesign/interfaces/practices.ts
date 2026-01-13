@@ -172,3 +172,12 @@ interface Task {
 function toggleTask(task: Task): Task {
   return { ...task, done: !task.done };
 }
+
+interface ErrorResponse {
+  error: string;
+  code: number;
+}
+
+function createError(message: string): ErrorResponse {
+  return { error: message, code: 400 };
+}
