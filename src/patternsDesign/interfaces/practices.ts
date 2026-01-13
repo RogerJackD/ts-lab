@@ -99,3 +99,29 @@ function createDog(name: string, age: number, breed: string): Dog {
     bark: () => `${name} says Woof!`
   };
 }
+
+interface Dictionary {
+  [key: string]: string | number;
+}
+
+function getKeys(dict: Dictionary): string[] {
+  return Object.keys(dict);
+}
+
+function getValues(dict: Dictionary): (string | number)[] {
+  return Object.values(dict);
+}
+
+interface Logger {
+  level: 'info' | 'warn' | 'error';
+  log: (message: string) => void;
+  getTimestamp: () => string;
+}
+
+function createLogger(level: Logger['level']): Logger {
+  return {
+    level,
+    log: (msg) => console.log(`[${level.toUpperCase()}] ${msg}`),
+    getTimestamp: () => new Date().toISOString()
+  };
+}
