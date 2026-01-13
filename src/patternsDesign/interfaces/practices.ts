@@ -162,3 +162,13 @@ interface UserProfile {
 function hasAvatar(profile: UserProfile): boolean {
   return profile.avatar !== undefined;
 }
+
+interface Task {
+  id: number;
+  title: string;
+  done: boolean;
+}
+
+function toggleTask(task: Task): Task {
+  return { ...task, done: !task.done };
+}
