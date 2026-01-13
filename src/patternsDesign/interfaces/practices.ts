@@ -80,3 +80,22 @@ function getFinalPrice(product: Product): number {
     ? product.price * (1 - product.discount / 100) 
     : product.price;
 }
+
+interface Animal {
+  name: string;
+  age: number;
+}
+
+interface Dog extends Animal {
+  breed: string;
+  bark(): string;
+}
+
+function createDog(name: string, age: number, breed: string): Dog {
+  return {
+    name,
+    age,
+    breed,
+    bark: () => `${name} says Woof!`
+  };
+}
