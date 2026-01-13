@@ -152,3 +152,13 @@ function createPost(title: string, content: string): Post {
     updatedAt: now
   };
 }
+
+interface UserProfile {
+  username: string;
+  avatar?: string;
+  bio: string;
+}
+
+function hasAvatar(profile: UserProfile): boolean {
+  return profile.avatar !== undefined;
+}
