@@ -65,3 +65,18 @@ interface Event {
 function sortEventsByDate(events: Event[]): Event[] {
   return [...events].sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime());
 }
+
+
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  discount?: number;
+  stock?: number;
+}
+
+function getFinalPrice(product: Product): number {
+  return product.discount 
+    ? product.price * (1 - product.discount / 100) 
+    : product.price;
+}
