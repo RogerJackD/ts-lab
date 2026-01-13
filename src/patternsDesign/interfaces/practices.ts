@@ -53,3 +53,15 @@ interface AppConfig {
 function mergeConfig(defaults: AppConfig, custom: Partial<AppConfig>): AppConfig {
   return { ...defaults, ...custom };
 }
+
+
+interface Event {
+  id: string;
+  type: string;
+  timestamp: Date;
+  payload: Record<string, any>;
+}
+
+function sortEventsByDate(events: Event[]): Event[] {
+  return [...events].sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime());
+}
