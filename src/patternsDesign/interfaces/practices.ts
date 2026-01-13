@@ -125,3 +125,30 @@ function createLogger(level: Logger['level']): Logger {
     getTimestamp: () => new Date().toISOString()
   };
 }
+
+interface Timestamped {
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface Identifiable {
+  id: string;
+}
+
+type Entity = Timestamped & Identifiable;
+
+interface Post extends Entity {
+  title: string;
+  content: string;
+}
+
+function createPost(title: string, content: string): Post {
+  const now = new Date();
+  return {
+    id: crypto.randomUUID(),
+    title,
+    content,
+    createdAt: now,
+    updatedAt: now
+  };
+}
