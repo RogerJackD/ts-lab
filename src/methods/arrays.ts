@@ -50,3 +50,18 @@ const names: string[] = ["juan", "maria", "luis"];
 const upperNames = names.map(name => name.toUpperCase());
 
 console.log(upperNames);
+
+interface User {
+  id: number;
+  active: boolean;
+}
+
+const users: User[] = [
+  { id: 1, active: true },
+  { id: 2, active: true },
+  { id: 3, active: false },
+];
+
+const allActive = users.every(user => user.active);
+
+console.log(allActive); // false
