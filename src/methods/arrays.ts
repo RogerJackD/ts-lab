@@ -36,3 +36,11 @@ const numbers: number[] = [1, 2, 3, 4, 5, 6];
 const evenNumbers = numbers.filter(n => n % 2 === 0);
 
 console.log(evenNumbers); // [2, 4, 6]
+
+const values: number[] = [5, 12, 8, 20, 3];
+
+const sum = values
+  .filter(v => v > 10)
+  .reduce((acc, v) => acc + v, 0);
+
+console.log(sum); // 32
