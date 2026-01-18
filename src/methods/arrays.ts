@@ -44,3 +44,9 @@ const sum = values
   .reduce((acc, v) => acc + v, 0);
 
 console.log(sum); // 32
+
+const names: string[] = ["juan", "maria", "luis"];
+
+const upperNames = names.map(name => name.toUpperCase());
+
+console.log(upperNames);
