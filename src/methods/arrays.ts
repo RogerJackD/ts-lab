@@ -65,3 +65,20 @@ const users: User[] = [
 const allActive = users.every(user => user.active);
 
 console.log(allActive); // false
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+const products: Product[] = [
+  { name: "Mouse", price: 50 },
+  { name: "Keyboard", price: 120 },
+  { name: "Monitor", price: 900 },
+];
+
+const mostExpensive = products.reduce((max, p) =>
+  p.price > max.price ? p : max
+);
+
+console.log(mostExpensive);
