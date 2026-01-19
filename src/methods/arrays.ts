@@ -138,3 +138,9 @@ const grouped = words.reduce<Record<number, string[]>>((acc, word) => {
 }, {});
 
 console.log(grouped);
+
+const nums: number[] = [3, 5, -2, 8];
+
+const hasNegative = nums.some(n => n < 0);
+
+console.log(hasNegative); // true
