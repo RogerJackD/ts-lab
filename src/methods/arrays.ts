@@ -92,3 +92,9 @@ const countMap = numbers.reduce<Record<number, number>>((acc, num) => {
 }, {});
 
 console.log(countMap); 
+
+const values: number[] = [1, 2, 2, 3, 4, 4];
+
+const uniqueValues = [...new Set(values)];
+
+console.log(uniqueValues); // [1, 2, 3, 4]
