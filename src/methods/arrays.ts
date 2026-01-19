@@ -128,3 +128,13 @@ const items: Item[] = [
 const foundItem = items.find(item => item.id === 2);
 
 console.log(foundItem);
+const words: string[] = ["hi", "hello", "hey", "bye"];
+
+const grouped = words.reduce<Record<number, string[]>>((acc, word) => {
+  const length = word.length;
+  acc[length] = acc[length] || [];
+  acc[length].push(word);
+  return acc;
+}, {});
+
+console.log(grouped);
