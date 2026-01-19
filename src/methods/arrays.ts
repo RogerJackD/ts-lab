@@ -82,3 +82,13 @@ const mostExpensive = products.reduce((max, p) =>
 );
 
 console.log(mostExpensive);
+
+
+const numbers: number[] = [1, 2, 2, 3, 3, 3];
+
+const countMap = numbers.reduce<Record<number, number>>((acc, num) => {
+  acc[num] = (acc[num] || 0) + 1;
+  return acc;
+}, {});
+
+console.log(countMap); 
