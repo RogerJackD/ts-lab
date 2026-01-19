@@ -113,3 +113,18 @@ const people: Person[] = [
 const sortedByAge = [...people].sort((a, b) => a.age - b.age);
 
 console.log(sortedByAge);
+
+interface Item {
+  id: number;
+  value: string;
+}
+
+const items: Item[] = [
+  { id: 1, value: "A" },
+  { id: 2, value: "B" },
+  { id: 3, value: "C" },
+];
+
+const foundItem = items.find(item => item.id === 2);
+
+console.log(foundItem);
