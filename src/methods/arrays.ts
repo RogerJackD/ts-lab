@@ -98,3 +98,18 @@ const values: number[] = [1, 2, 2, 3, 4, 4];
 const uniqueValues = [...new Set(values)];
 
 console.log(uniqueValues); // [1, 2, 3, 4]
+
+interface Person {
+  name: string;
+  age: number;
+}
+
+const people: Person[] = [
+  { name: "Ana", age: 30 },
+  { name: "Luis", age: 20 },
+  { name: "Pedro", age: 40 },
+];
+
+const sortedByAge = [...people].sort((a, b) => a.age - b.age);
+
+console.log(sortedByAge);
